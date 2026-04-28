@@ -17,7 +17,7 @@ def generate_file(items: list[str], title):
     title = "_".join(title.split(' '))
 
     for item in items:
-        file_cont += f"\n- [] {item}"
+        file_cont += f"\n- [ ] {item}"
 
     with open(TODO_DIR / f"{title}.md", mode='w') as todolist:
         todolist.write(file_cont)
