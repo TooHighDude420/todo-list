@@ -10,7 +10,6 @@ if not TODO_DIR.exists():
 console = Console(color_system='truecolor')
 
 title = console.input("Enter todo title:\n")
-items = []
 
 def generate_file(items: list[str], title):
     file_cont = f"# {title}"
@@ -24,9 +23,11 @@ def generate_file(items: list[str], title):
         todolist.write(file_cont)
 
     console.print(f"generated {title}.md")
+    console.clear()
 
 running = True
 cont = False
+items = []
 
 while(running):
     current = []
@@ -53,6 +54,7 @@ while(running):
         
         case 'c':
             generate_file(items, title)
+            items = []
             cont = True
 
         case _:
