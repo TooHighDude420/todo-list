@@ -20,10 +20,10 @@ def generate_file(items: list[str], title):
     for item in items:
         file_cont += f"\n- [] {item}"
 
-    with open(TODO_DIR / f"TODO.{title}.md", mode='w') as todolist:
+    with open(TODO_DIR / f"{title}.md", mode='w') as todolist:
         todolist.write(file_cont)
 
-    console.print(f"generated TODO.{title}.md")
+    console.print(f"generated {title}.md")
 
 running = True
 cont = False
