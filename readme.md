@@ -2,6 +2,9 @@
 
 simple python markdown todo-list generator
 
+requirements:
+- python
+
 ## usage
 
 ### install requirements
